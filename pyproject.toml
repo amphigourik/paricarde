@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "paricarde"
+version = "0.1.0"
+description = ""
+authors = ["amphigourik <alves.jeanbaptiste@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^3.1.0"
+
+[tool.poetry.scripts]
+paricarde = "paricarde.app:app.run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Participants - La Paricarde{% endblock %}
+
+{% block content %}
+<h2>Liste des participants</h2>
+<div class="sticky-scroll" style="text-align: center;">
+    <table class="rankingTable rtable js-extend-target rankingTable--no-shadow" data-target="262289105">
+        <colgroup>
+            <col class="col_1">
+            <col class="col_2">
+            <col class="col_3">
+            <col class="col_4">
+            <col class="col_5">
+            <col class="col_6">
+            <col class="col_7">
+        </colgroup>
+        <thead>
+            <tr class="rankingTables__head">
+                <th class="position">Dossard</th>
+                <th class="is-alignLeft">Coureur</th>
+                <th class="is-alignCenter">Équipe</th>
+                <th class="is-alignCenter">Temps</th>
+                <th class="is-alignCenter">Écart</th>
+                <th class="is-alignCenter">B</th>
+                <th class="is-alignCenter">P</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for rider in riders %}
+            <tr>
+                <td class="is-alignCenter">{{ rider.number }}</td>
+                <td class="runner is-sticky" style="text-align: left;">
+                    <span class="flag-icon flag-icon-{{ rider.nationality.lower() }}" style="margin-right: 12px;"></span>
+                    <a href="{{ url_for('rider', id=rider.id) }}">{{ rider.name.upper() }}</a>
+                </td>
+                <td class="break-line team">
+                    {% for team in teams %}
+                        {% if team.id == rider.team_id %}
+                            {{ team.name }}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td class="is-alignCenter time">N/A</td>
+                <td class="is-alignCenter time">N/A</td>
+                <td class="is-alignCenter time">-</td>
+                <td class="is-alignCenter time">-</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'Galibier';
+    src: url('path/to/Galibier-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Galibier';
+    src: url('path/to/Galibier-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Galibier';
+    src: url('path/to/Galibier-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Galibier', Arial, sans-serif;
+    text-align: center;
+    background-color: #ffffff;
+    margin: 0;
+}
+
+header {
+    background: #ffff00;
+    padding: 10px;
+    color: white;
+}
+
+nav {
+    background: #181818;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ffff00;
+}
+
+h1, h2 {
+    color: #181818;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: #181818;
+    color: white;
+}
+
+.runner a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+.rankingTable {
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+}
+
+.rankingTable tbody tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+.rankingTable tbody tr td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.rankingTable thead th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.is-alignLeft {
+    text-align: left;
+}
+
+.is-alignCenter {
+    text-align: center;
+}
+
+.conditions-list {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.conditions-list ul {
+    text-align: left;
+    padding-left: 24px;
+    list-style-type: disc;
+}
+
+.img-80 {
+    width: 80%;
+}
+
+.img-100 {
+    width: 100%;
+}
+
+.race-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 60%;
+    min-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.parallax-container {
+    position: relative;
+    height: 400px; /* Adjust the height as needed */
+    background-image: url('/static/velo_canal.jpg'); /* Replace with your image path */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#logo {
+    width: auto;
+    height: 96px;
+}
+
+#countdown-container {
+    font-size: 2em;
+    background-color: #ffff00;
+    color: #181818;
+    text-align: center;
+    margin-top: 20px;
+    transform: translate(0, 100%);
+    width: 200px;
+    align-self: center;
+}
+
+#partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.partner-logo {
+    margin: 0 10px;
+    max-height: 100px; /* Ajustez la hauteur maximale des logos selon vos besoins */
+}

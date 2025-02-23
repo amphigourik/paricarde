@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Accueil - La Paricarde{% endblock %}
+
+{% block content %}
+<h2>Bienvenue sur la Paricarde 🚴‍♂️🥖</h2>
+<p>La course cycliste de l'année, entre Paris et la Picardie, revient pour une nouvelle édition.</p>
+<div class="parallax-container">
+    <div id="countdown-container">
+        <div id="countdown-text">
+            <p style="margin: 0px;">26/04/2025</p>
+        </div>
+        <div id="countdown"></div>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='countdown.js') }}"></script>
+
+
+<h2>Partenaires</h2>
+<div id="partners">
+    <img src="{{ url_for('static', filename='logo_picardie_1986.png') }}" alt="Région Picardie" class="partner-logo">
+    <img src="{{ url_for('static', filename='logo_boulangers.svg') }}" alt="CNBBPF" class="partner-logo">
+    <img src="{{ url_for('static', filename='logo_compiegne.jpg') }}" alt="Ville de Compiègne" class="partner-logo">
+</div>
+{% endblock %}

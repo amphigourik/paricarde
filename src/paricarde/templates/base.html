@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}La Paricarde{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='logo_paricarde_circle.png') }}">
+</head>
+<body>
+    <header>
+        <img src="{{ url_for('static', filename='logo_paricarde_outlined.svg') }}" alt="Logo de la Paricarde" id="logo">
+        <nav>
+            <a href="{{ url_for('home') }}">Accueil</a>
+            <a href="{{ url_for('riders') }}">Participants</a>
+            <a href="{{ url_for('race') }}">Tracé</a>
+            <a href="{{ url_for('registration') }}">Inscription</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2025 La Paricarde - Parodie de course cycliste</p>
+    </footer>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/css/flag-icon.min.css">
+
+</body>
+</html>

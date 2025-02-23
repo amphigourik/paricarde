@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Tracé - La Paricarde{% endblock %}
+
+{% block content %}
+<div class="race-info">
+    <h2>Présentation du tracé</h2>
+    <p>Un parcours magnifique entre Paris et la Picardie empruntant l'<a href="https://fr.eurovelo.com/ev3" target="_blank">EuroVélo 3</a>, avec des ravitaillements réguliers.</p>
+    <p>Un tracé moins long, moins exigeant, avec un dénivelé maintenu et un finish plus roulant pour laisser parler la poudre.</p>
+    <img src="{{ url_for('static', filename='minimap.png') }}" alt="Carte du tracé" class="img-100">
+    <p>À contrepied de la surenchère en kilomètres et en % des grands tours, La Paricarde fait le choix cette année de proposer un parcours plus court et plus accessible pour rendre son issue plus incertaine et plus ouverte.</p>
+    <p>Le tracé de <strong>La Paricarde Édition 2025</strong> fait 101 km de long et 500 m de dénivelé positif. Il fait la part belle aux forêts domaniales, aux chemins de halage, aux voies vertes et aux petites routes de campagne.</p>
+    <br>
+    <img src="{{ url_for('static', filename='profile.png') }}" alt="Profil du tracé" class="img-100">
+    <p>Après un départ fictif vers 5h30 depuis Colombes, le départ est donné autour de 6h00 à Paris, au métro Pigalle.
+        Les participants continuent ensuite Boulevard de la Chapelle pour rejoindre le bassin de la Villette.
+        Ils suivent ensuite le canal de l'Ourcq jusqu'à Claye-Souilly.
+        Après une phase de transition au milieu des champs, ils grimpent jusqu'aux portes du département de l'Oise, à Dammartin-en-Goële.
+        Ils traversent ensuite la forêt de Chantilly du sud au nord, en passant par Senlis, avant de rejoindre la vallée de l'Oise et de la remonter jusqu'à Compiègne.
+    </p>
+</div>
+{% endblock %}
